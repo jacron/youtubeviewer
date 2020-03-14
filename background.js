@@ -14,14 +14,17 @@ chrome.runtime.onInstalled.addListener(function() {
     });
 });
 
-const winspecs = 'width=1300,height=820,resizable=0,locationbar=0,top=100,left=100';
+const winspecs = 'width=1300,height=790,resizable=0,locationbar=0,top=100,left=100';
 
 function callUrl(url, title) {
     const pos = url.indexOf('?');
-    title = title.replace(/ /g, '+');
-    const qs = url.substr(pos);
+    const search = url.substr(pos);
+    title = title
+        .replace(/ /g, '+');
+    const wurl = `youtube.html${search}&n=${title}`;
+    // console.log(wurl);
     window.open(
-        'youtube.html' + qs + '&n=' + title,
+        wurl,
         'youtube',
         winspecs
     );
