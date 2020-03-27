@@ -1,6 +1,7 @@
 {
   "name": "Youtube viewer",
   "description": "Nice clean viewer",
+  "author": "jan h croonen",
   "version": "0.1",
   "permissions": [
     "declarativeContent",
