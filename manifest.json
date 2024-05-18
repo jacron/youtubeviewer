@@ -2,16 +2,15 @@
   "name": "Youtube viewer",
   "description": "Nice clean viewer",
   "author": "jan h croonen",
-  "version": "0.1",
+  "version": "0.2",
   "permissions": [
     "declarativeContent",
     "tabs"
   ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
-  "page_action": {
+  "action": {
     "default_icon": "images/youtube32.png",
     "default_title": "youtube viewer"
   },
@@ -21,5 +20,5 @@
     "48": "images/youtube48.png",
     "128": "images/youtube128.png"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
